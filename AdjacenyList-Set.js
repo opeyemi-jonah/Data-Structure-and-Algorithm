@@ -32,6 +32,7 @@ function addEdge(graph, src, dest)
     // Since graph is undirected, add an edge
     // from dest to src also
     graph.adjList[dest].add(src);
+    // console.log(Array.isArray(graph.adjList));
 }
  
 // A utility function to print the adjacency
