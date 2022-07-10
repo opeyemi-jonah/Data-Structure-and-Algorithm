@@ -38,15 +38,19 @@ const buildGraph = (edges) => {
     for (let edge of edges) {
         //destructure the edges
         const [a,b] = edge;
+       
+        
         //initialize a & b in the graph if they don't exist
+        console.log();
         if (!(a in graph)) graph[a] = [];
 
         if(!(b in graph)) graph[b] = []; //because it's an undirected graph so it should be symmetric
-
+            
         graph[a].push(b);
         graph[b].push(a);
+    
     }
-
+   
     return graph;
 }
 
