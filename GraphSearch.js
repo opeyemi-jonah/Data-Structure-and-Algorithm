@@ -1,3 +1,4 @@
+  //Structy lecture
   //Represent this data as a graph
   const airports = 'PHX BKK OKC JFK LAX MEX EZE HEL LOS LAP LIM'.split(' ');
 

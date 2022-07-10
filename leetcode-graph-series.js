@@ -1,4 +1,5 @@
 /**
+ * Data Structure work session with Jimmy
 *https://leetcode.com/problems/find-if-path-exists-in-graph/
  * @param {number} n
  * @param {number[][]} edges

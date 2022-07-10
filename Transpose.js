@@ -17,8 +17,8 @@ function createGraph(V){
 
 //Given a directed graph
 //utility function that adds the edges to the Adjacency list
-function addEdge(graph, src, dest){
-    for (let i = 0; i< V)
+function addEdge(graph,V, src, dest){
+    for (let i = 0; i< V; i++)
    graph.adjList[src].add(dest);
     // graph.adjList[dest].add(src); if the graph given is undirected then it makes sense to add from dest to src
     

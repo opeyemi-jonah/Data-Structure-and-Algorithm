@@ -1,9 +1,10 @@
 /** 
+ * __Structy lecture__
  * Depth first traversal
  * Uses Stack
  * Stack operations: Push & Pop
  * Add to top, remove from top
- * 
+ * Nature: Recursive & Iterative
 */
 
 
@@ -54,6 +55,7 @@ depthFirstPrint(graph, 'a'); //abdfce
  * Uses Queue
  * Queue operations: shift & push
  * Add to back remove from front
+ * Nature: Iterative
  */
 
 /**
