@@ -7,6 +7,7 @@ A node contains two things first is data and second is a link that connects it w
 
 List of methods:
 Insert--> begin & end
+update
 delete/remove
 traverse
 size check
@@ -36,13 +37,62 @@ class Node:
         position = 0
         if position == index:
             self.insertAtBegin(data)
+        
         else:
             while(current_node != None and position+1 != index):
                 postion = position+1
                 current_node = current_node.next
+           
             if current_node != None:
-
-                new_node.next = current_node.next
+                new_node.next = current_node.next #Check to see if new_node.next = current_node will still work
                 current_node.next = new_node
+            
             else:
-                print("Index not present")
+                print("Index does not exist!")
+    
+    def insertAtEnd(self,data):
+        new_node = Node(data)
+        if self.head is None:
+            self.head = new_node
+            return
+
+        current_node = self.head
+        while(current_node.next):
+            current_node = current_node.next
+        
+        current_node.next = new_node
+
+    # Update node of a linked list
+    # at a given position
+    def updateNode(self, val, index):
+        current_node = self.head
+        position = 0
+        if position == index:
+            current_node = val
+        
+        else:
+            while(current_node != None and position != index):
+                position = position+1
+                current_node = current_node.next
+
+            if current_node != None:
+                current_node.next = val
+
+            else:
+                print("Index does not exist!")
+    
+    def remove_first_node(self):
+        if (self.head == None):
+            return
+
+        self.head = self.head.next
+        #self.head = None --Try this later
+
+    def remove_last_node(self):
+        if (self.head == None):
+            return
+        
+        current_node = self.head
+        while(current_node.next.next):
+            current_node = current_node.next
+        current_node.next = None
